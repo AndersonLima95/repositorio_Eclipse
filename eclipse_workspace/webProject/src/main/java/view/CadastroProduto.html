@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastro de Produtos</title>
+<script src="https://kit.fontawesome.com/a68915eedd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<a href="CadastroPessoa.html"><button><i class="fa-solid fa-user-plus fa-2x"></i> Cadastro de Pessoas</button></a>
+	<a href="ListaPessoa.html"><button><i class="fa-regular fa-address-book fa-2x"></i> Lista de Pessoas</button></a>
+	<a href="CadastroProduto.html"><button><i class="fa-solid fa-box-archive fa-2x"></i> Cadastro de Produtos</button></a>
+	<a href="ListarProduto.html" ><button><i class="fa-solid fa-boxes-stacked fa-2x"></i> Lista de Produtos</button></a>
+	<a href="CadastroVenda.html"><button><i class="fa-solid fa-basket-shopping fa-2x"></i> Cadastro de Vendas</button></a>
+	<a href="ListaVenda.html" ><button><i class="fa-solid fa-store fa-2x"></i> Lista de Vendas</button></a>
+	
+	<fieldset>
+		<legend>Cadastro de Produtos</legend>
+		<form th:action="@{/CadastroProduto}" th:object="${CadastroProduto}" method="post">
+		<div>
+			<label for="descricao">Descrição:</label>
+			<br>
+			<input type="text" th:field="*{descricao}" required="required">
+			<br>
+		</div>	
+			<div>
+			<label for="quantidade">Quantidade:</label>
+			<br>
+			<input type="text" th:field="*{quantidade}" required="required">
+			<br>
+		</div>	
+			<div>
+			<label for="valorDaCompra">Valor Da Compra:</label>
+			<br>
+			<input type="text" th:field="*{valorDaCompra}" required="required">
+			<br>
+		</div>	
+			<div>
+			<label for="valorDeVenda">Valor de Venda:</label>
+			<br>
+			<input type="text" th:field="*{valorDeVenda}" required="required">
+			<br>
+		</div>	
+			<div>
+			<label for="dataDeValidade">Data de Validade:</label>
+			<br>
+			<input type="date" th:field="*{dataDeValidade}" required="required">
+			<br>
+		</div>	
+			<div>
+			<label for="fabricante">Fabricante/Fornecedor:</label>
+			<br>
+			<input type="text" th:field="*{fabricante}" required="required">
+			</div>
+			<br>		
+		<div>
+			<button type="submit">Cadastrar</button>
+			<button type="reset">Limpar</button>
+		</div>
+		
+		
+		</form>
+	</fieldset>
+	
+</body>
+</html>
